@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: darkgray;
+}
+
+.box {
+  background: #f80b0b;
+  height: 700px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 4%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  margin-top: 1em;
+  margin-left: 1em;
+  background: rgb(247, 246, 244);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c1 {
+  background: #36558f;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  overflow: hidden;
+  position: relative;
+}
+
+.c2 {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background: #d5dae0;
+  height: 20px;
+  width: 20px;
+  box-shadow: -5px -4px 0px 35px #6495ed;
+  border-radius: 50%;
+}
+
+.redc {
+  background: #750101;
+  height: 10px;
+  width: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+.redc1 {
+  background: rgb(228, 186, 186);
+  height: 3px;
+  width: 3px;
+  box-shadow: -1px -1px 0px 3px #c70000;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.yelc {
+  background: #828b01;
+  height: 10px;
+  width: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+.yelc1 {
+  background: #f7fad1;
+  height: 3px;
+  width: 3px;
+  box-shadow: -1px -1px 0px 3px #eeff00;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.grec {
+  background: #006d05;
+  height: 10px;
+  width: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+.grec1 {
+  background: #c5f8c7;
+  height: 3px;
+  width: 3px;
+  box-shadow: -1px -1px 0px 3px #00b109;
+  border-radius: 50%;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.bbox {
+  background: black;
+  height: 87%;
+  width: 90%;
+  clip-path: polygon(55% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cbox {
+  background: red;
+  height: 98%;
+  width: 98%;
+  clip-path: polygon(55% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.tri {
+  width: 0;
+  height: 0;
+  margin-left: 0.8em;
+  margin-top: 25%;
+  border-top: 25px solid transparent;
+  border-left: 30px solid black;
+  border-bottom: 25px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctri {
+  width: 0;
+  height: 0;
+  margin-left: -2em;
+  border-top: 20px solid transparent;
+  border-left: 25px solid yellow;
+  border-bottom: 20px solid transparent;
+}
+
+.rectangle {
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 40px 40px 40px 40px;
+  height: 10px;
+  width: 300px;
+  bottom: 10%;
+  left: 15%;
+}
+
+.curveside {
+  position: absolute;
+  border: 2px solid black;
+  height: 87%;
+  width: 30px;
+  right: -1%;
+  top: 10%;
+}

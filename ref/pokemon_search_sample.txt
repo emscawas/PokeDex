@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>pokedex</title>
+    </head>
+<body>
+
+<!-- Input Search -->
+<input type="text" id="pokemon_name" placeholder="enter pokemon name">
+<input type="button" onclick="searchPokemon()" value="search"/>
+
+<h1>Result:</h1>
+<!-- generate result -->
+<h4 id="pokemon_name_result"></h4>
+<img id="pokemon_image_result" src="#" style="height: 100px; width: 100px; display: none;"/>
+</body>
+</html>
+
+<!-- Javasctipt -->
+<script>
+function searchPokemon() {
+    var pokemon_name = document.getElementById('pokemon_name').value;
+    // API URL
+    var pokedex_URI = 'https://courses.cs.washington.edu/courses/cse154/webservices/pokedex/pokedex.php?pokemon=';
+    // API Image location URL
+    var pokedex_URI_img = 'https://courses.cs.washington.edu/courses/cse154/webservices/pokedex/';
+
+    // request pokemon data
+    fetch(pokedex_URI + pokemon_name)
+         .then(response => response.json()) //convert response data to json
+         .then(result => {
+ 
+             //get pokemon name and update <label id="pokemon_name_result">
+             document.getElementById("pokemon_name_result").innerHTML = result.name;
+
+             // get image and update <img src...>
+             document.getElementById("pokemon_image_result").src = pokedex_URI_img + result.images.photo;
+             document.getElementById("pokemon_image_result").style.display = 'block';
+         })
+        //  if error request occur.
+         .catch(err => alert('Invalid pokemon name!'))
+
+}
+</script>
