@@ -68,11 +68,11 @@ body {
   background: rgb(228, 186, 186);
   height: 3px;
   width: 3px;
-  box-shadow: -1px -1px 0px 3px #c70000;
+  box-shadow: -1px -1px 0px 4px #c70000;
   border-radius: 50%;
   position: relative;
   top: 2px;
-  left: 2px;
+  left: 1px;
 }
 .yelc {
   background: #828b01;
@@ -89,11 +89,11 @@ body {
   background: #f7fad1;
   height: 3px;
   width: 3px;
-  box-shadow: -1px -1px 0px 3px #eeff00;
+  box-shadow: -1px -1px 0px 4px #eeff00;
   border-radius: 50%;
   position: relative;
   top: 2px;
-  left: 2px;
+  left: 1px;
 }
 .grec {
   background: #006d05;
@@ -110,11 +110,11 @@ body {
   background: #c5f8c7;
   height: 3px;
   width: 3px;
-  box-shadow: -1px -1px 0px 3px #00b109;
+  box-shadow: -1px -1px 0px 4px #00b109;
   border-radius: 50%;
   position: relative;
   top: 2px;
-  left: 2px;
+  left: 1px;
 }
 .bbox {
   background: black;
