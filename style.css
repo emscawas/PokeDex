@@ -6,6 +6,7 @@ body {
   display: grid;
   place-items: center;
   background: darkgray;
+  margin-right: 20%;
 }
 
 .box {
@@ -16,7 +17,9 @@ body {
   border-radius: 4%;
   display: flex;
   position: relative;
-  overflow: hidden;
+  perspective: 150rem;
+  perspective-origin: center;
+  /* overflow: hidden; */
 }
 
 .circle {
@@ -116,29 +119,115 @@ body {
   top: 2px;
   left: 1px;
 }
-.bbox {
-  background: black;
-  height: 87%;
-  width: 90%;
-  clip-path: polygon(55% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+
+.parentbox {
   position: absolute;
-  top: 10%;
-  left: 5%;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cbox {
+.coverbox {
+  background: black;
+  height: 87%;
+  width: 95%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  position: absolute;
+  top: 10%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: right;
+  transition: 500ms linear;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+.insidebox {
+  background: black;
+  height: 87%;
+  width: 95%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  position: absolute;
+  top: 10%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cinsidebox {
   background: red;
   height: 98%;
   width: 98%;
-  clip-path: polygon(55% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
   display: flex;
   align-items: center;
-  position: relative;
 }
 
+.outbbox {
+  background: red;
+  height: 98%;
+  width: 98%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  display: flex;
+  align-items: center;
+  backface-visibility: hidden;
+  position: relative;
+}
+.innercoverbox {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  background: black;
+  height: 87%;
+  width: 90%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  display: flex;
+  align-items: center;
+  transform-origin: right;
+  transition: 500ms linear;
+}
+.inneroutbbox {
+  background: red;
+  height: 98%;
+  width: 98%;
+  left: 1%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  display: flex;
+  align-items: center;
+  backface-visibility: hidden;
+  position: relative;
+}
+#close_open {
+  display: none;
+}
+.trig {
+  cursor: pointer;
+  position: absolute;
+  top: 22%;
+  left: 5%;
+  height: 75%;
+  width: 10%;
+  /* background: blue; */
+  opacity: 0.5;
+  z-index: 999;
+}
+
+#close_open:checked ~ .coverbox {
+  display: inline-flex;
+  transform: rotateY(180deg);
+  z-index: 0;
+}
+#close_open:checked ~ .innercoverbox {
+  display: inline-flex;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+#close_open:checked ~ .trig {
+  transform: translateX(54rem);
+}
 .tri {
   width: 0;
   height: 0;
@@ -171,11 +260,19 @@ body {
   left: 15%;
 }
 
-.curveside {
+.sidebox {
   position: absolute;
-  border: 2px solid black;
-  height: 87%;
+  border: 3px solid black;
+  height: 100%;
   width: 30px;
-  right: -1%;
-  top: 10%;
+  right: 0;
+  top: 0;
+}
+.inside_sidebox {
+  position: absolute;
+  border: 3px solid black;
+  height: 100%;
+  width: 30px;
+  right: 0;
+  top: 0;
 }
