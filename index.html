@@ -31,14 +31,10 @@
               <div class="miniredcircle"></div>
               <div class="orangescreen">
                 <div class="imgdata">
-                  <img
-                    id="image"
-                    src="/ref/pokemon-png-18182.png"
-                    alt="pikachu"
-                  />
+                  <img id="pic" src="" alt="pikachu" />
                 </div>
                 <div class="pname">
-                  <p>Pikachu</p>
+                  <p id="neym"></p>
                 </div>
               </div>
               <div class="mrc"></div>
@@ -51,8 +47,8 @@
             <!-- controller -->
             <div class="upbtn"></div>
             <div class="downbtn"></div>
-            <div class="leftbtn"></div>
-            <div class="rightbtn"></div>
+            <button class="leftbtn" id="prev" onclick="prv()"></button>
+            <button class="rightbtn" id="next" onclick="nxt()"></button>
             <div class="centerbtn"></div>
           </div>
           <div class="inside_sidebox"></div>
@@ -63,12 +59,13 @@
         <div class="innercoverbox">
           <div class="inneroutbbox">
             <div class="inneroutscreen">
-              <ul>
-                <li>September 24</li>
+              <p id="pkmntype"></p>
+              <ul id="ulmoves">
+                <!-- <li>September 24</li>
                 <li>12-3pm</li>
                 <li>Gower Park, Shelter 12</li>
                 <li>24 Evelyn ave. Greenville</li>
-                <li>RSVP to Anna</li>
+                <li>RSVP to Anna</li> -->
               </ul>
             </div>
             <div class="osbluebtns">
@@ -117,5 +114,6 @@
         <div class="grec1"></div>
       </div>
     </div>
+    <script src="func.js"></script>
   </body>
 </html>

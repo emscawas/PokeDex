@@ -244,6 +244,7 @@ body {
 /* image data */
 .imgdata {
   margin-top: 1%;
+  margin-left: 35%;
   height: 85%;
   width: 85%;
   display: flex;
@@ -360,8 +361,9 @@ body {
   border-radius: 10px;
 }
 .leftbtn {
+  cursor: pointer;
   position: absolute;
-  bottom: 11%;
+  bottom: 11.15%;
   right: 7.4rem;
   background: #07312d;
   width: 55px;
@@ -369,8 +371,9 @@ body {
   border-radius: 10px;
 }
 .rightbtn {
+  cursor: pointer;
   position: absolute;
-  bottom: 11%;
+  bottom: 11.15%;
   right: 3.9rem;
   background: #07312d;
   width: 55px;
