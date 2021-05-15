@@ -18,9 +18,9 @@ const fetchpkmn = async (change) => {
         ).src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${change}.png`);
 
         // pokemon type
-
-        document.getElementById('pkmntype').textContent = "Type:" + data.types[0].type.name;
-        console.log(data.types.length);
+        const type = data.types.map((type) => type.type.name).join(',');
+        document.getElementById('pkmntype').textContent = "Type:" + type;
+        // console.log(data.types.length);
         // pokemon moves
         let ulmoves = document.getElementById("ulmoves");
         ulmoves.textContent = "";
