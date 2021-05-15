@@ -5,3 +5,5 @@ designing on working PokeDex design :)
 05102021 -PokeDex close-open animation
 
 05152021 -Functioning PokeDex v1
+
+05152021 -Pokemon type fix and moves and display animation
