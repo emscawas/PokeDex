@@ -11,3 +11,4 @@ Visit it here: https://emscawas.github.io/PokeDex/
 05152021 -Pokemon type fix and moves and display animation
 
 05202021 -Additional parts update
+         -Additional design added
