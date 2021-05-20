@@ -7,3 +7,5 @@ designing on working PokeDex design :)
 05152021 -Functioning PokeDex v1
 
 05152021 -Pokemon type fix and moves and display animation
+
+05202021 -Additional parts update
