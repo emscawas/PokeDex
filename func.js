@@ -12,8 +12,13 @@ const fetchpkmn = async (change) => {
         let nm = (document.getElementById("neym").textContent =
             change + ". " + data.name);
         // pokemon height and weight
-        let ht = document.getElementById('height').textContent = "Height: " + data.height;
-        let wt = document.getElementById('weight').textContent = "Weight: " + data.weight;
+        let dt = data.height;
+        let dtres = dt / 10.00;
+        let wt = data.weight;
+        let wtres = wt / 10.00;
+
+        document.getElementById('height').textContent = "Height: " + dtres + "m";
+        document.getElementById('weight').textContent = "Weight: " + wtres + "kg";
         // pokemon image
         let img = (document.getElementById(
             "pic"
@@ -22,13 +27,16 @@ const fetchpkmn = async (change) => {
         // pokemon type
         const type = data.types.map((type) => type.type.name).join(',');
         document.getElementById('pkmntype').textContent = "Type:" + type;
-        // console.log(data.types.length);
+
         // pokemon moves
         let ulmoves = document.getElementById("ulmoves");
         ulmoves.textContent = "";
 
+        //
         for (let i = 0; i <= 3; i++) {
-            var name = data.moves[Math.floor(Math.random() * data.moves.length)].move.name;
+            //[Math.floor(Math.random() * data.moves.length)]
+            var name = data.moves[Math.floor(Math.random() * (data.moves.length))].move.name;
+            name.slice(0, 4);
             let li = document.createElement("li");
             li.appendChild(document.createTextNode(name));
             ulmoves.appendChild(li);

@@ -5,10 +5,10 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: darkgray;
+  background-image: url("/ref/pokemon_pokeball_red-wallpaper-1920x1080.jpg");
+  background-size: cover;
   margin-right: 20%;
 }
-
 .box {
   background: #f80b0b;
   height: 700px;
@@ -19,7 +19,7 @@ body {
   position: relative;
   perspective: 150rem;
   perspective-origin: center;
-  /* overflow: hidden; */
+  box-shadow: 0px 0px 45px 20px #000000;
 }
 
 .circle {
@@ -431,6 +431,7 @@ body {
   height: 87%;
   width: 90%;
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
+  filter: drop-shadow(15px 20px 15px rgba(0, 0, 0, 0.5));
   display: flex;
   align-items: center;
   transform-origin: right;
@@ -443,7 +444,6 @@ body {
   left: 1%;
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
   display: flex;
-  backface-visibility: hidden;
   position: relative;
 }
 .inneroutscreen {
