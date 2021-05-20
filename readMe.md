@@ -1,5 +1,7 @@
 designing on working PokeDex design :)
 
+Visit it here: https://emscawas.github.io/PokeDex/
+
 05022021-only the back cover of the pokedex is done for now.
 
 05102021 -PokeDex close-open animation
