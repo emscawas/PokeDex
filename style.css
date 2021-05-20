@@ -5,8 +5,14 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background-image: url("/ref/pokemon_pokeball_red-wallpaper-1920x1080.jpg");
-  background-size: cover;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    45deg,
+    #ffffff 0%,
+    #ffffff 50%,
+    #fe5858 0%,
+    #fe5858 50%
+  );
   margin-right: 20%;
 }
 .box {
@@ -19,13 +25,13 @@ body {
   position: relative;
   perspective: 150rem;
   perspective-origin: center;
-  box-shadow: 0px 0px 45px 20px #000000;
+  box-shadow: 30px 30px 45px 15px #000000;
 }
 
 .circle {
   margin-top: 1em;
   margin-left: 1em;
-  background: rgb(247, 246, 244);
+  background: #f7f6f4;
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -431,12 +437,12 @@ body {
   height: 87%;
   width: 90%;
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 14%, 33% 14%);
-  filter: drop-shadow(15px 20px 15px rgba(0, 0, 0, 0.5));
   display: flex;
   align-items: center;
   transform-origin: right;
   transition: 500ms linear;
 }
+
 .inneroutbbox {
   background: red;
   height: 98%;
@@ -653,6 +659,27 @@ body {
   transform: rotateY(180deg);
   z-index: 1;
 }
+
+.shadowbox {
+  height: 72%;
+  width: 80%;
+  position: absolute;
+  margin-left: 16%;
+  margin-top: 28%;
+  transform-origin: right;
+  transition: 450ms linear;
+  z-index: -1;
+}
+
+#close_open:checked ~ .shadowbox {
+  /* background: white; */
+  background: rgba(0, 0, 0, 1);
+  box-shadow: -65px 5px 45px 15px #000000;
+  transform: rotateY(180deg);
+  position: absolute;
+  left: 0;
+}
+
 #close_open:checked ~ .trig {
   transform: translateX(54.1rem);
 }

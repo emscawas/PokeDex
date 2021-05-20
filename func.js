@@ -32,11 +32,10 @@ const fetchpkmn = async (change) => {
         let ulmoves = document.getElementById("ulmoves");
         ulmoves.textContent = "";
 
-        //
+        // 
         for (let i = 0; i <= 3; i++) {
-            //[Math.floor(Math.random() * data.moves.length)]
-            var name = data.moves[Math.floor(Math.random() * (data.moves.length))].move.name;
-            name.slice(0, 4);
+            // [Math.floor(Math.random() * data.moves.length)]
+            var name = data.moves[i].move.name;
             let li = document.createElement("li");
             li.appendChild(document.createTextNode(name));
             ulmoves.appendChild(li);
