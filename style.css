@@ -285,6 +285,7 @@ body {
 .pname p {
   font-family: "Farro", sans-serif;
   font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .mrc {
@@ -347,6 +348,11 @@ body {
   left: 22%;
   height: 15%;
   width: 35%;
+  font-family: "Farro", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  /* padding-bottom: 20%; */
 }
 
 /* controller part */
@@ -618,13 +624,23 @@ body {
 .trig {
   cursor: pointer;
   position: absolute;
-  top: 22%;
+  top: 22.6%;
   left: 5%;
-  height: 75%;
+  height: 73.6%;
   width: 10%;
-  /* background: blue; */
-  opacity: 0.5;
+  background-color: rgba(17, 17, 17, 0.7);
+  opacity: 0;
   z-index: 999;
+}
+.trig:hover {
+  transition: opacity 500ms linear;
+  opacity: 1;
+  padding-left: 2.5%;
+  text-transform: uppercase;
+  text-align: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  color: white;
 }
 
 #close_open:checked ~ .coverbox {
@@ -638,5 +654,5 @@ body {
   z-index: 1;
 }
 #close_open:checked ~ .trig {
-  transform: translateX(54rem);
+  transform: translateX(54.1rem);
 }

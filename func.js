@@ -11,7 +11,9 @@ const fetchpkmn = async (change) => {
         // pokemon name
         let nm = (document.getElementById("neym").textContent =
             change + ". " + data.name);
-
+        // pokemon height and weight
+        let ht = document.getElementById('height').textContent = "Height: " + data.height;
+        let wt = document.getElementById('weight').textContent = "Weight: " + data.weight;
         // pokemon image
         let img = (document.getElementById(
             "pic"
