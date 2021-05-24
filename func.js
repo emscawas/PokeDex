@@ -32,15 +32,28 @@ const fetchpkmn = async (change) => {
         let ulmoves = document.getElementById("ulmoves");
         ulmoves.textContent = "";
 
-        // 
-        for (let i = 0; i <= 3; i++) {
-            // [Math.floor(Math.random() * data.moves.length)]
-            var name = data.moves[i].move.name;
-            let li = document.createElement("li");
-            li.appendChild(document.createTextNode(name));
-            ulmoves.appendChild(li);
+        // babalikan ko 'to
+
+        let pkmoves = data.moves;
+        if (pkmoves.length > 5) {
+            for (let i = 0; i <= 3; i++) {
+                var name = pkmoves[Math.floor(Math.random() * (data.moves.length - 4))].move.name;
+                name.slice(0, 4);
+                let li = document.createElement("li");
+                li.appendChild(document.createTextNode(name));
+                ulmoves.appendChild(li);
+            }
+        } else {
+            for (let i = 0; i <= 3; i++) {
+                var name = data.moves[i].move.name;
+                let li = document.createElement("li");
+                li.appendChild(document.createTextNode(name));
+                ulmoves.appendChild(li);
+
+            }
         }
 
+        //
     } catch (error) {
         console.log(error);
     }

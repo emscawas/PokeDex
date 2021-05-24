@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  cursor: default;
+  user-select: none;
 }
 body {
   min-height: 100vh;
@@ -7,12 +9,13 @@ body {
   place-items: center;
   background: rgb(255, 255, 255);
   background: linear-gradient(
-    45deg,
+    0deg,
     #ffffff 0%,
     #ffffff 50%,
     #fe5858 0%,
     #fe5858 50%
   );
+  background-size: contain;
   margin-right: 20%;
 }
 .box {
