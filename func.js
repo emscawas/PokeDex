@@ -37,8 +37,8 @@ const fetchpkmn = async (change) => {
         let pkmoves = data.moves;
         if (pkmoves.length > 5) {
             for (let i = 0; i <= 3; i++) {
-                var name = pkmoves[Math.floor(Math.random() * (data.moves.length - 4))].move.name;
-                name.slice(0, 4);
+                const name = pkmoves[Math.floor(Math.random() * (data.moves.length - i) - i)].move.name;
+                // name.slice(0, 4);
                 let li = document.createElement("li");
                 li.appendChild(document.createTextNode(name));
                 ulmoves.appendChild(li);
